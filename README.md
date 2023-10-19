@@ -1,11 +1,3 @@
----
-title: Content
-output:
-    html_document:
-        toc: true
-        toc_float: true
----
-
 # Content
 - [OpenUSD](#openusd)
     - [Compiling under windows](#compilingunderwindows)
