@@ -160,9 +160,3 @@ ngrok http 8080
 ```
 
 You can specify the unique identifier for your website to use a consider link, or use one of the automatically generated links (see output of ngrok command, and help for more options).
-
-#### you are...
-
-.. raw:: html
-	
-	<?php require_once("http://www.paoloemilioselva.it/githubpage_counter.php"); addCounter(); ?>
