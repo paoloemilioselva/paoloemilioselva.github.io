@@ -11,24 +11,23 @@
 <a id="compilingunderwindows"></a>
 ### Compiling under windows
 
-Currently using usd-23.08 at the time of writing this.
+Currently using usd-25.08 at the time of writing this.
 
 There is not that much more from the main docs here https://github.com/PixarAnimationStudios/OpenUSD/blob/release/README.md#windows </br>
 
 What is a bit annoying is finding the right packages to be installed before compiling it, and I think it depends on how much you've "messed" up your current environment.
 
-I have two systems, one has been going on for years, and it is currently a frankenstein of libraries which I admittedly have to say I don't think I can repro it entirely; the other one is a fresh Windows 11 and I had to install just a few python modules, like
+I have two systems, one has been going on for years, and it is currently a frankenstein of libraries which I admittedly have to say I don't think I can repro it entirely; the other one is a fresh Windows 11 and here is what else is needed to compile OpenUSD via its build_script:
 
-```
-sudo pip3 install pyside6==6.5.2 
-```
-
-and installed `cmake-3.26` and `VisualStudio 2022`.
+- `Visual Studio 2022`
+- `python-3.12.3`
+- `pip install pyside6` which resolved in `6.9.1`
+- `pip install PyOpenGL` which resolved in `3.1.10`
 
 Then launched the build with
 
 ```
-python ./build_scripts/build_usd.py --embree --openimageio --test C:\dev\usd-23.08
+python ./build_scripts/build_usd.py --embree --openimageio --test C:\dev\usd-25.08
 ```
 You might have an error on some rebuild, mainly in the tests, and you may want to force a `BOOST` rebuild too adding
 
