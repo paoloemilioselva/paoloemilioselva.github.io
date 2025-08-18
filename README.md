@@ -23,6 +23,7 @@ I have two systems, one has been going on for years, and it is currently a frank
 - `python-3.12.3`
 - `pip install pyside6` which resolved in `6.9.1`
 - `pip install PyOpenGL` which resolved in `3.1.10`
+- `pip install numpy` which resolved in `2.3.2`
 
 Then launched the build with
 
