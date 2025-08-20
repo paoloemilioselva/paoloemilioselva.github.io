@@ -24,11 +24,12 @@ I have two systems, one has been going on for years, and it is currently a frank
 - `pip install pyside6` which resolved in `6.9.1`
 - `pip install PyOpenGL` which resolved in `3.1.10`
 - `pip install numpy` which resolved in `2.3.2`
+- `pip install Jinja2` which resolved in `3.1.6`
 
 Then launched the build with
 
 ```
-python ./build_scripts/build_usd.py --embree --openimageio --test C:\dev\usd-25.08
+python ./build_scripts/build_usd.py --embree --openimageio C:\dev\usd-25.08
 ```
 You might have an error on some rebuild, mainly in the tests, and you may want to force a `BOOST` rebuild too adding
 
@@ -40,6 +41,12 @@ In case you need extra build-args, you can specify them like this for some speci
 
 ```
 --build-args USD,"-DPXR_BUILD_GPU_SUPPORT=ON"
+```
+
+In case you have Renderman too, the following are useful to also compile the hydra delegate for renderman
+
+```
+--prman --prman-location "C:\Program Files\Pixar\RenderManProServer-26.3"
 ```
 
 <a id="envvars"></a>
